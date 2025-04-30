@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: center;
+        }
+        button{
+            background-color: azure;
+            padding: 25px;
+            border-width: 1px;
+            border-radius: 20px;
+            margin: 4px;
+        }
+        .corner{
+            padding: 20px;
+            background-color: peachpuff;
+            border: solid brown;
+            border-width: 1px;
+            border-radius: 20px;
+
+        }
+        #center-button{
+            background: salmon;
+            border: solid;
+            padding: 30px;
+            border-radius: 10px;
+            border-width: 1px;
+        }
+        button:hover{
+            transform: scale(1.05);
+            transition: .2s;
+        }
+        .div{
+            position: absolute;
+            top:30%
+        }
+    </style>
+</head>
+<body>
+    <div class="div">
+        <button class="corner">
+        Left
+        </button>
+        <button>
+            others
+        </button>
+        <button>
+            others
+        </button>
+        <button id = "center-button">
+            Center
+        </button>
+        <button>
+            others
+        </button>
+        <button>
+            others
+        </button>
+        <button class = "corner">
+            Right
+        </button>
+    </div>
+    
+</body>
+</html>

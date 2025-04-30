@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nam{
+            width: 400px;
+            font-size: 20px;
+            border: solid;
+            border-radius: 4px;
+            border-color: rgb(173, 207, 207);
+            padding: 0px 8px;
+            height: 32px;
+        }
+        form{
+            background-color: azure;
+            width: 600px;
+            text-align: left;
+            margin: 4% auto;
+            padding: 32px;
+            padding-top: 8px;
+        }
+        label{
+            font-size: 20px;
+            font-family: sans-serif;
+        }
+        input{
+            margin: 8px 0px;
+        }
+        button{
+            font-size: 24px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 8px 16px;
+            width: 100%;
+            background-color: rgb(139, 238, 255);
+            border: none;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <form>
+        <p style="font-size: larger;">Please fill the Form</p>
+        <label>Name: </label><br>
+        <input class="nam" type="text" id="fname" name="fname" placeholder="First Name" required><br>
+        <input class="nam" type="text" id="lname" name="lname" placeholder="Last Name" required><br>
+        <label>Password: </label><br>
+        <input class="nam" type="password" placeholder="New Password" required><br>
+        <input class="nam" type="password" placeholder="Confirm Password" required><br><br>
+        <label>Gender:</label><br>
+        <input type="radio" value="Male" name="Gender">
+        <label>Male</label><br>
+        <input type="radio" value="Female" name="Gender">
+        <label>Female</label><br>
+        <input type="radio" value="Non-Binary" name="Gender">
+        <label>Non-Binary</label><br><br>
+        <label>Choose Your Transport</label><br>
+        <input type="checkbox" value="Bike">
+        <label for="vehicle1"> I have a bike</label><br>
+        <input type="checkbox" value="Car">
+        <label for="vehicle2"> I have a car</label><br>
+        <input type="checkbox" value="Boat">
+        <label for="vehicle3"> I have a boat</label><br><br>
+        <label>Enter Your Birthdate</label><br>
+        <input type="date" class="bd"><br><br>
+        <a href="form_sub.html"><button>Submit</button></a>
+    </form>
+</body>
+</html>
