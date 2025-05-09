@@ -40,7 +40,8 @@ void printLL(Node* head){
 }
 
 Node* insHead(Node* head,int data){
-    return new Node(data,head,nullptr);
+    head->back = new Node(data,head,nullptr);
+    return head->back;
 }
 
 Node* delHead(Node* head){
