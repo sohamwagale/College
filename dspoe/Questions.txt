@@ -1,75 +1,18 @@
-9. Write a program to create a stack using array. Take input an array from the user. 
-Perform all the stack operations. 
-10. Write a program to create a stack using linked list. Take input an array from the user. 
-Perform all the stack operations. 
-11. Write a program to create a queue using array. Take input an array from the user. 
-Perform all the queue operations. 
-12. Write a program to create a queue using linked list. Take input an array from the user. 
-Perform all the queue operations. 
-13. Write a program to create a singly linked list. Perform the following operations on 
-created linked list. 
-a) Insertion at the beginning 
-b) Deletion at the end 
-c) Display linked list 
-14. Write a program to create a singly linked list. Perform the following operations on 
-created linked list. 
-a) Insertion at the end 
-b) Deletion at the beginning 
-c) Display linked list 
-15. Write a program to create a singly linked list. Perform the following operations on 
-created linked list. 
-d) Insertion at the any position 
-e) Deletion at the any position 
-f) Display linked list 
-16. Write a program to create a doubly linked list. Perform the following operations on 
-created linked list. 
-a) Insertion at the beginning 
-b) Deletion at the end 
-c) Display linked list 
-17. Write a program to create a doubly linked list. Perform the following operations on 
-created linked list. 
-a) Insertion at the end 
-b) Deletion at the beginning 
-c) Display linked list 
-18. Write a program to create a doubly linked list. Perform the following operations on 
-created linked list. 
-a) Insertion at the any position 
-b) Deletion at the position 
-c) Display linked list 
-19. Write a program to create a circular linked list and display it. 
-20. Write a program to create binary tree and perform all traversing techniques. 
-21. Write a program to create BST and perform all traversing techniques. 
-22. Write a program to create a singly linked list. Perform the following operations on 
-created linked list. 
-a) Insertion at the end 
-b) Deletion at the any position 
-c) Display linked list 
-23. Write a program to create a singly linked list. Perform the following operations on 
-created linked list. 
-a) Insertion at the any position 
-b) Deletion at the beginning 
-c) Display linked list 
-24. Write a program to create a singly linked list. Perform the following operations on 
-created linked list. 
-a) Insertion at the any position 
-b) Deletion at the end 
-c) Display linked list 
-25. Write a program to create a singly linked list. Perform the following operations on 
-created linked list. 
-d) Insertion at the beginning 
-e) Deletion at the any position 
-f) Display linked list 
+28. Write a program to create priority queue and display its data. 
+
+29. Write a program to create descending priority queue and display its data. 
+
+30. Write a program to convert infix expression into postfix expression. 
+
+31.  Write a program to convert infix expression into prefix expression. 
+
 26. Implement Deque using array. Perform following operations: 
 a) Insert at beginning 
 b) Delete at end 
-c) Display Deque 
-27. Implement Deque using array. Perform following operations: 
-a) Insert at end 
-b) Delete at beginning 
-c) Display Deque 
-28. Write a program to create priority queue and display its data. 
-29. Write a program to create descending priority queue and display its data. 
-30. Write a program to convert infix expression into postfix expression. 
-31.  Write a program to convert infix expression into prefix expression. 
+c) Insert at end 
+d) Delete at beginning 
+e) Display Deque 
+
 32. Write a program to create graph and traverse it using BFS. 
+
 33. Write a program to create graph and traverse it using DFS.
