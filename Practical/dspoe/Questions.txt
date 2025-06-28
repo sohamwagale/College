@@ -1,0 +1,3 @@
+32. Write a program to create graph and traverse it using BFS. 
+
+33. Write a program to create graph and traverse it using DFS.

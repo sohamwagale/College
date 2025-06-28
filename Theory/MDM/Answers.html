@@ -1,0 +1,1803 @@
+
+				
+				<html>
+					<head>
+						<meta charset="UTF-8"/>
+						<meta name="viewport" content="width=device-width, initial-scale=1"/>
+						<style>.jsdraw--editButton {
+  display: none;
+  width: min-content;
+  max-height: 50px;
+  z-index: 1;
+  opacity: 0.9;
+  align-self: flex-end;
+  justify-self: right;
+}
+
+.jsdraw--svgWrapper {
+  display: inline-grid;
+}
+
+.jsdraw--svgWrapper > * {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.jsdraw--svgWrapper:hover .jsdraw--editButton,
+.jsdraw--svgWrapper:focus .jsdraw--editButton,
+.jsdraw--svgWrapper:focus-within .jsdraw--editButton,
+.jsdraw--editButton:focus {
+  display: block;
+}</style><script>(()=>{"use strict";var t={167:(t,e)=>{Object.defineProperty(e,"__esModule",{value:!0}),e.default=t=>{const e=t.querySelector("img");if(!e)return void console.warn("Freehand drawing plugin: No image found in container.");if(t.classList.contains("js-draw--editable"))return;t.classList.add("js-draw--editable");const n=t.getAttribute("data-js-draw-edit-label"),o=t.getAttribute("data-js-draw-content-script-id"),s=()=>{const t=e.src;webviewApi.postMessage(o,t).catch((e=>{console.error("Error posting message!",e,"\nMessage: ",t)}))};document.body.classList.contains("mce-content-body")||"tinymce"===document.body.id?e.style.cursor="pointer":(()=>{const e=document.createElement("button");e.textContent=`${n} 🖊️`,e.classList.add("jsdraw--editButton"),t.appendChild(e),e.onclick=()=>{s()}})(),e.ondblclick=s}}},e={};function n(o){var s=e[o];if(void 0!==s)return s.exports;var r=e[o]={exports:{}};return t[o](r,r.exports,n),r.exports}(()=>{const t=n(167),e=()=>{const e=document.querySelectorAll("*[data-js-draw-content-script-id]");for(const n of e)(0,t.default)(n)};document.addEventListener("joplin-noteDidUpdate",(()=>{e()})),e()})()})();</script></script><style>pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+}
+
+code.hljs {
+  padding: 3px 5px;
+}
+
+/*
+
+Atom One Light by Daniel Gamage
+Original One Light Syntax theme from https://github.com/atom/one-light-syntax
+
+base:    #fafafa
+mono-1:  #383a42
+mono-2:  #686b77
+mono-3:  #a0a1a7
+hue-1:   #0184bb
+hue-2:   #4078f2
+hue-3:   #a626a4
+hue-4:   #50a14f
+hue-5:   #e45649
+hue-5-2: #c91243
+hue-6:   #986801
+hue-6-2: #c18401
+
+*/
+
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}</style>
+						<title>Answers</title>
+					</head>
+					<body>
+						<div class="exported-note"><div class="exported-note-title">Answers</div>
+
+<style>
+		/* https://necolas.github.io/normalize.css/ */
+		html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
+		article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}
+		pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}
+		b,strong{font-weight:bolder}small{font-size:80%}img{border-style:none}
+
+		body {
+			font-size: 15px;
+			color: #32373F;
+			word-wrap: break-word;
+			line-height: 1.6em;
+			background-color: #ffffff;
+			font-family: 'Avenir Next', 'Avenir', 'Arial', sans-serif;
+			padding-bottom: 0px;
+			padding-top: 0px;
+		}
+		kbd {
+			border: 1px solid rgb(220, 220, 220);
+			box-shadow: inset 0 -1px 0 rgb(220, 220, 220);
+			padding: 2px 4px;
+			border-radius: 3px;
+			background-color: rgb(243, 243, 243);
+		}
+
+		:root {
+			--scrollbar-size: 7px;
+		}
+
+		::-webkit-scrollbar {
+			width: var(--scrollbar-size);
+			height: var(--scrollbar-size);
+		}
+		::-webkit-scrollbar-thumb {
+			border-radius: calc(var(--scrollbar-size) / 2);
+		}
+		::-webkit-scrollbar-corner {
+			background: none;
+		}
+		::-webkit-scrollbar-track {
+			border: none;
+		}
+		::-webkit-scrollbar-thumb {
+			background: rgba(50, 55, 63, 0.54); 
+		}
+		::-webkit-scrollbar-track:hover {
+			background: rgba(0, 0, 0, 0.1); 
+		}
+		::-webkit-scrollbar-thumb:hover {
+			background: rgba(50, 55, 63, 0.63); 
+		}
+
+		
+
+		/* Remove top padding and margin from first child so that top of rendered text is aligned to top of text editor text */
+
+		#rendered-md > h1:first-child,
+		#rendered-md > h2:first-child,
+		#rendered-md > h3:first-child,
+		#rendered-md > h4:first-child,
+		#rendered-md > ul:first-child,
+		#rendered-md > ol:first-child,
+		#rendered-md > table:first-child,
+		#rendered-md > blockquote:first-child,
+		#rendered-md > img:first-child,
+		#rendered-md > p:first-child {
+			margin-top: 0;
+			padding-top: 0;
+		}
+		
+		p, h1, h2, h3, h4, h5, h6, ul, table {
+			margin-top: .6em;
+			margin-bottom: 1.35em;
+
+			/*
+				Adds support for RTL text in the note body. It automatically detects the direction using the content.
+				Issue: https://github.com/laurent22/joplin/issues/3991
+			*/
+			unicode-bidi: plaintext;
+		}
+
+		h1, h2, h3, h4, h5, h6, ul, table {
+			margin-bottom: 0.65em;
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+			line-height: 1.5em;
+		}
+		h1 {
+			font-size: 1.5em;
+			font-weight: bold;
+			border-bottom: 1px solid #dddddd;
+			padding-bottom: .3em;
+		}
+		h2 {
+			font-size: 1.3em;
+			font-weight: bold;
+			padding-bottom: .1em; */
+		}
+		h3 {
+			font-size: 1.1em;
+			font-weight: bold;
+		}
+		h4, h5, h6 {
+			font-size: 1em;
+			font-weight: bold;
+		}
+
+		.exported-note-title {
+			font-size: 2em;
+			font-weight: bold;
+			margin-bottom: 0.8em;
+			line-height: 1.5em;
+			padding-bottom: .35em;
+			border-bottom: 1px solid #dddddd;
+		}
+
+		a {
+			color: #155BDA;
+		}
+		ul, ol {
+			padding-left: 0;
+			margin-left: 1.7em;
+		}
+		li {
+			margin-bottom: .4em;
+		}
+		li p {
+			margin-top: 0.2em;
+			margin-bottom: 0;
+		}
+
+		dt {
+			font-weight: bold;
+			margin-bottom: 0.25em;
+		}
+
+		dd {
+			margin-inline-start: 2.5em;
+			margin-bottom: 0.5em;
+		}
+
+		.resource-icon {
+			display: inline-block;
+			position: relative;
+			top: 0.3em;
+			text-decoration: none;
+			width: 1.2em;
+			height: 1.4em;
+			margin-right: 0.4em;
+			background-color:  #155BDA;
+		}
+    /* These icons are obtained from the wonderful ForkAwesome project by copying the src svgs 
+     * into the css classes below.
+     * svgs are obtained from https://github.com/ForkAwesome/Fork-Awesome/tree/master/src/icons/svg
+     * instead of the svg width, height property you must use a viewbox here, 0 0 1536 1792 is typically the actual size of the icon
+     * each line begins with the pre-amble -webkit-mask: url("data:image/svg+xml;utf8,
+     * and of course finishes with ");
+     * to prevent artifacts it is also necessary to include -webkit-mask-repeat: no-repeat;
+     * on the following line
+     * */
+		.fa-joplin {
+			/* Awesome Font file */
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M373.834 128C168.227 128 0 296.223 0 501.834v788.336C0 1495.778 168.227 1664 373.834 1664h788.336c205.608 0 373.83-168.222 373.83-373.83V501.834C1536 296.224 1367.778 128 1162.17 128zm397.222 205.431h417.424a7.132 7.132 0 0 1 7.132 7.133v132.552c0 4.461-3.619 8.073-8.077 8.073h-57.23c-24.168 0-43.768 19.338-44.284 43.374v2.377h-.017v136.191h-.053l-.466 509.375c-5.02 77.667-39.222 149.056-96.324 201.046-60.28 54.834-141.948 85.017-229.962 85.017-12.45 0-25.208-.61-37.907-1.785-92.157-8.682-181.494-48.601-251.662-112.438-71.99-65.517-117.147-150.03-127.164-238-11.226-98.763 23.42-192.783 95.045-257.937 81.99-74.637 198.185-101.768 316.613-75.704 5.574 1.227 9.55 6.282 9.55 11.997v199.52c-.199 2.625-1.481 6.599-8.183 2.896-.663-.365-1.194-.511-1.653-.531-21.987-10.587-45.159-17.57-68.559-19.916-.38-.04-.757-.124-1.138-.163-.537-.048-1.034-.033-1.556-.075-4.13-.354-8.183-.517-12.203-.58-.87-.011-1.771-.127-2.641-.127-.486 0-.951.05-1.437.057-1.464.011-2.886.115-4.33.163-2.76.102-5.497.211-8.182.448-.273.024-.547.07-.835.097-25.509 2.4-47.864 11.104-65.012 25.47-.954.802-1.974 1.53-2.9 2.36a1.34 1.34 0 0 1-.168.146c-23.96 21.8-34.881 53.872-30.726 90.316 4.62 40.737 26.94 81.156 62.841 113.823 35.908 32.67 80.335 52.977 125.113 57.186 35.118 3.36 66.547-3.919 89.899-20.461a97.255 97.255 0 0 0 9.365-7.501c2.925-2.661 5.569-5.5 8.086-8.416.3-.348.672-.673.975-1.024 8.253-9.864 14.222-21.067 17.996-33.148.639-2.034 1.051-4.148 1.564-6.227.381-1.563.81-3.106 1.112-4.693.555-2.784.923-5.632 1.253-8.49.086-.709.183-1.414.237-2.128.492-4.893.693-9.858.55-14.91h.013V521.623c-2.01-22.626-20.78-40.434-43.928-40.434h-57.23a8.071 8.071 0 0 1-8.077-8.073V340.564a7.132 7.132 0 0 1 7.136-7.133z'/></svg>");
+		}
+		.fa-file-image {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zm-128-448v320H256v-192l192-192 128 128 384-384zm-832-192c-106 0-192-86-192-192s86-192 192-192 192 86 192 192-86 192-192 192z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-pdf {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zm-514-593c25 20 53 38 84 56 42-5 81-7 117-7 67 0 152 8 177 49 7 10 13 28 2 52-1 1-2 3-3 4v1c-3 18-18 38-71 38-64 0-161-29-245-73-139 15-285 46-392 83-103 176-182 262-242 262-10 0-19-2-28-7l-24-12c-3-1-4-3-6-5-5-5-9-16-6-36 10-46 64-123 188-188 8-5 18-2 23 6 1 1 2 3 2 4 31-51 67-116 107-197 45-90 80-178 104-262-32-109-42-221-24-287 7-25 22-40 42-40h22c15 0 27 5 35 15 12 14 15 36 9 68-1 3-2 6-4 8 1 3 1 5 1 8v30c-1 63-2 123-14 192 35 105 87 190 146 238zm-576 411c30-14 73-57 137-158-75 58-122 124-137 158zm398-920c-10 28-10 76-2 132 3-16 5-31 7-44 2-17 5-31 7-43 1-3 2-5 4-8-1-1-1-3-2-5-1-18-7-29-13-36 0 2-1 3-1 4zm-124 661c88-35 186-63 284-81-10-8-20-15-29-23-49-43-93-103-127-176-19 61-47 126-83 197-15 28-30 56-45 83zm646-16c-5-5-31-24-140-24 49 18 94 28 124 28 9 0 14 0 18-1 0-1-1-2-2-3z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-word {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zM233 768v107h70l164 661h159l128-485c5-15 8-30 10-46 1-8 2-16 2-24h4l3 24c3 14 4 30 9 46l128 485h159l164-661h70V768h-300v107h90l-99 438c-4 16-6 33-7 46l-2 21h-4c0-6-2-14-3-21-3-13-5-30-9-46L825 768H711l-144 545c-4 16-5 33-8 46l-4 21h-4l-2-21c-1-13-3-30-7-46l-99-438h90V768H233z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-powerpoint {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zm-992-234v106h327v-106h-93v-167h137c43 0 82-2 118-15 90-31 146-124 146-233s-54-193-137-228c-38-15-84-19-130-19H416v107h92v555h-92zm353-280H650V882h120c35 0 62 6 83 18 36 21 56 62 56 115 0 56-20 99-62 120-21 10-47 15-78 15z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-excel {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zm-979-234v106h281v-106h-75l103-161c12-19 18-34 21-34h2c1 4 3 7 5 10 4 8 10 14 17 24l107 161h-76v106h291v-106h-68l-192-273 195-282h67V768H828v107h74l-103 159c-12 19-21 34-21 33h-2c-1-4-3-7-5-10-4-7-9-14-17-23L648 875h76V768H434v107h68l189 272-194 283h-68z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-audio {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zM620 850c12 5 20 17 20 30v544c0 13-8 25-20 30-4 1-8 2-12 2-8 0-16-3-23-9l-166-167H288c-18 0-32-14-32-32v-192c0-18 14-32 32-32h131l166-167c10-9 23-12 35-7zm417 689c19 0 37-8 50-24 83-102 129-231 129-363s-46-261-129-363c-22-28-63-32-90-10-28 23-32 63-9 91 65 80 100 178 100 282s-35 202-100 282c-23 28-19 68 9 90 12 10 26 15 40 15zm-211-148c17 0 34-7 47-20 56-60 87-137 87-219s-31-159-87-219c-24-26-65-27-91-3-25 24-27 65-2 91 33 36 52 82 52 131s-19 95-52 131c-25 26-23 67 2 91 13 11 29 17 44 17z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-video {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zM768 768c70 0 128 58 128 128v384c0 70-58 128-128 128H384c-70 0-128-58-128-128V896c0-70 58-128 128-128h384zm492 2c12 5 20 17 20 30v576c0 13-8 25-20 30-4 1-8 2-12 2-8 0-17-3-23-9l-265-266v-90l265-266c6-6 15-9 23-9 4 0 8 1 12 2z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-archive {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M640 384V256H512v128h128zm128 128V384H640v128h128zM640 640V512H512v128h128zm128 128V640H640v128h128zm700-388c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H768v128H640V128H128v1536h1280zM781 943c85 287 107 349 107 349 5 17 8 34 8 52 0 111-108 192-256 192s-256-81-256-192c0-18 3-35 8-52 0 0 21-62 120-396V768h128v128h79c29 0 54 19 62 47zm-141 465c71 0 128-29 128-64s-57-64-128-64-128 29-128 64 57 64 128 64z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-code {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zM480 768c11-14 31-17 45-6l51 38c14 11 17 31 6 45l-182 243 182 243c11 14 8 34-6 45l-51 38c-14 11-34 8-45-6l-226-301c-8-11-8-27 0-38zm802 301c8 11 8 27 0 38l-226 301c-11 14-31 17-45 6l-51-38c-14-11-17-31-6-45l182-243-182-243c-11-14-8-34 6-45l51-38c14-11 34-8 45 6zm-620 461c-18-3-29-20-26-37l138-831c3-18 20-29 37-26l63 10c18 3 29 20 26 37l-138 831c-3 18-20 29-37 26z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-alt, .fa-file-csv {
+      /* fork-awesome doesn't have csv so we use the text icon */
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zM384 800c0-18 14-32 32-32h704c18 0 32 14 32 32v64c0 18-14 32-32 32H416c-18 0-32-14-32-32v-64zm736 224c18 0 32 14 32 32v64c0 18-14 32-32 32H416c-18 0-32-14-32-32v-64c0-18 14-32 32-32h704zm0 256c18 0 32 14 32 32v64c0 18-14 32-32 32H416c-18 0-32-14-32-32v-64c0-18 14-32 32-32h704z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		blockquote {
+			border-left: 4px solid rgb(220, 220, 220);
+			padding-left: 1.2em;
+			margin-left: 0;
+			opacity: 0.7;
+		}
+
+		.jop-tinymce table,
+		table {
+			text-align: left;
+			border-collapse: collapse;
+			border: 1px solid rgb(220, 220, 220);
+			background-color: #ffffff;
+		}
+
+		.jop-tinymce table td, .jop-tinymce table th,
+		table td, th {
+			text-align: left;
+			padding: .5em 1em .5em 1em;
+			font-size: 15;
+			color: #32373F;
+			font-family: 'Avenir Next', 'Avenir', 'Arial', sans-serif;
+		}
+
+		.jop-tinymce table td,
+		table td {
+			border: 1px solid rgb(220, 220, 220);
+		}
+
+		.jop-tinymce table th,
+		table th {
+			border: 1px solid rgb(220, 220, 220);
+			border-bottom: 2px solid rgb(220, 220, 220);
+			background-color: rgb(247, 247, 247);
+		}
+
+		.jop-tinymce table tr:nth-child(even),
+		table tr:nth-child(even) {
+			background-color: rgb(247, 247, 247);
+		}
+
+		.jop-tinymce table tr:hover,
+		table tr:hover {
+			background-color: #e5e5e5;
+		}
+
+		hr {
+			border: none;
+			border-bottom: 2px solid #dddddd;
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+		
+		.inline-code,
+		.mce-content-body code {
+			border: 1px solid rgb(220, 220, 220);
+			background-color: rgb(243, 243, 243);
+			padding-right: .2em;
+			padding-left: .2em;
+			border-radius: .25em;
+			color: rgb(0,0,0);
+			font-size: .9em;
+		}
+
+		.highlighted-keyword {
+			background-color: #F3B717;
+			color: black;
+		}
+
+		
+	.not-loaded-resource img {
+		width: 1.15em;
+		height: 1.15em;
+		background: white;
+		padding: 2px !important;
+		border-radius: 2px;
+		box-shadow: 0 1px 3px #000000aa;
+	}
+
+	a.not-loaded-resource img {
+		margin-right: .2em;
+	}
+
+	a.not-loaded-resource {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+
+		.md-checkbox input[type=checkbox]:checked {
+			opacity: 0.7;
+		}
+
+		.jop-tinymce ul.joplin-checklist .checked,
+		.md-checkbox .checkbox-label-checked {
+			opacity: 0.5;
+		}
+
+		.exported-note {
+			padding: 1em;
+		}
+
+		.joplin-editable .joplin-source {
+			display: none;
+		}
+
+		mark {
+			background: #F7D26E;
+			color: black;
+		}
+
+		/* =============================================== */
+		/* For TinyMCE */
+		/* =============================================== */
+
+		.mce-content-body {
+			/* Note: we give a bit more padding at the bottom, to allow scrolling past the end of the document */
+			padding: 5px 10px 10em 0;
+		}
+
+		/*
+		.mce-content-body code {
+			background-color: transparent;
+		}
+		*/
+
+		.mce-content-body [data-mce-selected=inline-boundary] {
+			background-color: transparent;
+		}
+
+		.mce-content-body .joplin-editable {
+			cursor: pointer !important;
+		}
+
+		.mce-content-body.mce-content-readonly {
+			opacity: 0.5;
+		}
+
+		/* We need that to make sure click events have the A has a target */
+		.katex a span {
+			pointer-events: none;
+		}
+
+		.media-player {
+			width: 100%;
+			margin-top: 10px;
+		}
+
+		.media-player.media-pdf {
+			min-height: 35rem;
+			width: 100%;
+			max-width: 1000px;
+			margin: 0;
+			border: 0;
+			display: block;
+		}
+
+		/* Clear the CODE style if the element is within a joplin-editable block */
+		.mce-content-body .joplin-editable code {
+			border: none;
+			background: none;
+			padding: 0;
+			color: inherit;
+			font-size: inherit;
+		}
+
+		/* To make code blocks horizontally scrollable */
+		/* https://github.com/laurent22/joplin/issues/5740 */
+		pre.hljs {
+			overflow-x: auto;
+		}
+
+		.joplin-table-wrapper{
+			overflow-x: auto;
+			overflow-y: hidden;
+		}
+
+		/* =============================================== */
+		/* For TinyMCE */
+		/* =============================================== */
+
+		@media print {
+			body {
+				height: auto !important;
+			}
+
+			pre {
+				white-space: pre-wrap;
+			}
+
+			.code, .inline-code {
+				border: 1px solid #CBCBCB;
+			}
+
+			#joplin-container-content {
+				/* The height of the content is set dynamically by JavaScript (in updateBodyHeight) to go
+				   around various issues related to scrolling. However when printing we don't want this
+				   fixed size as that would crop the content. So we set it to auto here. "important" is
+				   needed to override the style set by JavaScript at the element-level. */
+				height: auto !important;
+			}
+		}
+	
+
+				/*
+					FOR THE MARKDOWN EDITOR
+				*/
+
+				/* Remove the indentation from the checkboxes at the root of the document
+				   (otherwise they are too far right), but keep it for their children to allow
+				   nested lists. Make sure this value matches the UL margin. */
+
+				li.md-checkbox {
+					list-style-type: none;
+				}
+
+				li.md-checkbox input[type=checkbox] {
+					margin-left: -1.71em;
+					margin-right: 0.7em;
+					position: relative;
+					top: 1px;
+				}
+				
+				ul.joplin-checklist {
+					list-style:none;
+				}
+
+				/*
+					FOR THE RICH TEXT EDITOR
+				*/
+
+				ul.joplin-checklist li::before {
+					content:"\f14a";
+					font-family:"Font Awesome 5 Free";
+					background-size: 16px 16px;
+					pointer-events: all;
+					cursor: pointer;
+					width: 1em;
+					height: 1em;
+					margin-left: -1.3em;
+					position: absolute;
+					color: #32373F;
+				}
+
+				.joplin-checklist li:not(.checked)::before {
+					content:"\f0c8";
+				}
+.mermaid { width: 640px; }
+pre.mermaid[data-processed=true] { white-space: unset; }
+.mermaid-export-graph {
+					opacity: 0;
+					height: 0;
+					z-index: 1;
+					position: relative;
+				} 
+				.joplin-editable:hover .mermaid-export-graph,
+				.joplin-editable .mermaid-export-graph:has(:focus-visible) {
+					opacity: 1;
+				}
+				.mermaid-export-graph > button:hover {
+					background-color: #CBDAF1 !important;
+				}</style><div id="rendered-md"><p>&nbsp;</p>
+<h2 id="white_check_mark-unit-1-introduction-to-r-programming">✅&nbsp;<strong>Unit 1: Introduction to R Programming</strong></h2>
+<hr/>
+<h3 id="large_blue_diamond-1-what-is-r-and-what-is-it-used-for">🔷 1. What is R and What is it Used For?</h3>
+<h4 id="blue_book-explanation">📘 Explanation:</h4>
+<ul>
+<li>
+<p><strong>R</strong> is a <strong>programming language</strong> developed in 1993 by <strong>Ross Ihaka and Robert Gentleman</strong>.</p>
+</li>
+<li>
+<p>It&rsquo;s <strong>free and open-source</strong>, and mainly used for:</p>
+<ul>
+<li>
+<p><strong>Statistical computing</strong></p>
+</li>
+<li>
+<p><strong>Data analysis</strong></p>
+</li>
+<li>
+<p><strong>Data visualization</strong></p>
+</li>
+<li>
+<p><strong>Machine learning</strong> (yes, even that!)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>It supports <strong>vectors, data frames, matrices</strong>, and more.</p>
+</li>
+</ul>
+<h4 id="brain-how-to-remember">🧠 How to remember:</h4>
+<blockquote>
+<p>&quot;R = Research and Reports&quot; &mdash; think of R as the go-to language for anyone doing serious data work.</p>
+</blockquote>
+<h4 id="wrench-applications">🔧 Applications:</h4>
+<ul>
+<li>
+<p>Academic research</p>
+</li>
+<li>
+<p>Business analytics</p>
+</li>
+<li>
+<p>Scientific studies</p>
+</li>
+<li>
+<p>Machine learning models</p>
+</li>
+</ul>
+<hr/>
+<h3 id="large_blue_diamond-2-key-features-of-r">🔷 2. Key Features of R</h3>
+<div class="joplin-table-wrapper">
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>📊 <strong>Statistical Methods</strong></td>
+<td>Built-in support for regression, clustering, etc.</td>
+</tr>
+<tr>
+<td>🎨 <strong>Graphics</strong></td>
+<td>Amazing visualizations via <code class="inline-code">ggplot2</code>, <code class="inline-code">lattice</code>, etc.</td>
+</tr>
+<tr>
+<td>📦 <strong>Packages</strong></td>
+<td>15,000+ on CRAN (like an app store for R)</td>
+</tr>
+<tr>
+<td>💻 <strong>Platform Independent</strong></td>
+<td>Runs on Windows, macOS, Linux</td>
+</tr>
+<tr>
+<td>🔗 <strong>Integrates with Other Languages</strong></td>
+<td>Works with Python, Java, C/C++</td>
+</tr>
+<tr>
+<td>🧠 <strong>Efficient Data Handling</strong></td>
+<td>Can handle big datasets</td>
+</tr>
+<tr>
+<td>📚 <strong>Great Community</strong></td>
+<td>Tons of documentation and tutorials</td>
+</tr>
+<tr>
+<td>📄 <strong>Reproducible Research</strong></td>
+<td><code class="inline-code">RMarkdown</code> for mixing code + report writing</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="brain-tip">🧠 Tip:</h4>
+<blockquote>
+<p>Imagine R as a Swiss knife &mdash; one tool, many blades (packages/functions).</p>
+</blockquote>
+<hr/>
+<h3 id="large_blue_diamond-3-what-is-rstudio">🔷 3. What is RStudio?</h3>
+<h4 id="blue_book-explanation-2">📘 Explanation:</h4>
+<ul>
+<li>
+<p><strong>RStudio</strong> is an <strong>IDE</strong> (Integrated Development Environment) for R.</p>
+</li>
+<li>
+<p>Makes coding in R easier with a neat UI.</p>
+</li>
+<li>
+<p>It <strong>does not replace R</strong>, it helps you <em>use R more efficiently</em>.</p>
+</li>
+</ul>
+<h4 id="desktop_computer-main-panels-in-rstudio">🖥 Main Panels in RStudio:</h4>
+<div class="joplin-table-wrapper">
+<table>
+<thead>
+<tr>
+<th>Panel</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Console (Bottom Left)</strong></td>
+<td>Where your code runs</td>
+</tr>
+<tr>
+<td><strong>Source (Top Left)</strong></td>
+<td>Where you write and save your scripts</td>
+</tr>
+<tr>
+<td><strong>Environment/History (Top Right)</strong></td>
+<td>Lists your variables and past commands</td>
+</tr>
+<tr>
+<td><strong>Files/Plots/Packages/Help (Bottom Right)</strong></td>
+<td>Manages files, shows graphs, helps with packages</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="brain-tip-2">🧠 Tip:</h4>
+<blockquote>
+<p>Think of RStudio as your <strong>lab desk</strong> and R as your <strong>equipment</strong>.</p>
+</blockquote>
+<hr/>
+<h3 id="large_blue_diamond-4-how-to-quit-rstudio">🔷 4. How to Quit RStudio?</h3>
+<h4 id="3-ways">3 Ways:</h4>
+<ol>
+<li>
+<p><strong>GUI Method (Graphical):</strong></p>
+<ul>
+<li>
+<p>File &rarr; Quit Session or just click the ✖️.</p>
+</li>
+<li>
+<p>It will ask: &ldquo;Do you want to save the workspace?&rdquo;</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Command Line:</strong></p>
+<ul>
+<li>
+<p>Type <code class="inline-code">q()</code> or <code class="inline-code">quit()</code> in the console.</p>
+</li>
+<li>
+<p>It will ask the same save prompt.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Auto-Save Settings:</strong></p>
+<ul>
+<li>Go to Tools &rarr; Global Options &rarr; General &rarr; &ldquo;Save workspace on exit&rdquo;</li>
+</ul>
+</li>
+</ol>
+<h4 id="brain-tip-3">🧠 Tip:</h4>
+<blockquote>
+<p>Always save scripts (<code class="inline-code">.R</code> files), not just the workspace. Scripts are reusable, workspaces aren&rsquo;t reliable for sharing.</p>
+</blockquote>
+<hr/>
+<h3 id="large_blue_diamond-5-difference-between-r-and-rstudio">🔷 5. Difference Between R and RStudio</h3>
+<div class="joplin-table-wrapper">
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>R</th>
+<th>RStudio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>Programming Language</td>
+<td>IDE (Interface)</td>
+</tr>
+<tr>
+<td>Function</td>
+<td>Does the actual computations</td>
+<td>Helps you write &amp; manage code</td>
+</tr>
+<tr>
+<td>Needed?</td>
+<td>Mandatory</td>
+<td>Optional, but highly recommended</td>
+</tr>
+<tr>
+<td>Analogy</td>
+<td>Car engine</td>
+<td>Dashboard</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="brain-tip-4">🧠 Tip:</h4>
+<blockquote>
+<p>R = Brain, RStudio = Face. R does the thinking; RStudio shows the expression!</p>
+</blockquote>
+<hr/>
+<h3 id="bulb-summary-flashpoints">💡 Summary Flashpoints:</h3>
+<ul>
+<li>
+<p><strong>R is for data analysis</strong>, stats, and graphs.</p>
+</li>
+<li>
+<p><strong>RStudio</strong> makes using R easier.</p>
+</li>
+<li>
+<p><strong>Packages</strong> are like apps that add power to R.</p>
+</li>
+<li>
+<p><strong>R can integrate</strong> with Python, SQL, Java, etc.</p>
+</li>
+<li>
+<p><strong>Use RStudio&rsquo;s 4 panels</strong> smartly: Source, Console, Environment, and Viewer.</p>
+</li>
+<li>
+<p>Always <strong>save scripts</strong> (.R) not just workspace images.</p>
+</li>
+</ul>
+<hr/>
+<p>&nbsp;</p>
+<hr/>
+<h2 id="white_check_mark-unit-2-r-data-structures-and-manipulation">✅ <strong>Unit 2: R Data Structures and Manipulation</strong></h2>
+<hr/>
+<h3 id="large_blue_diamond-1-creating-variables-in-r">🔷 1. Creating Variables in R</h3>
+<h4 id="blue_book-concept">📘 Concept:</h4>
+<p>Variables store data in R (like numbers, text, TRUE/FALSE, etc.)</p>
+<h4 id="white_check_mark-syntax-3-ways">✅ Syntax (3 Ways):</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">x &lt;- 10        # Most common
+y = &quot;Hello&quot;    # Also valid
+20 -&gt; z        # Less used, but allowed</pre><pre class="hljs"><code>x <span class="hljs-operator">&lt;-</span> 10        <span class="hljs-comment"># Most common</span>
+y <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Hello&quot;</span>    <span class="hljs-comment"># Also valid</span>
+<span class="hljs-number">20</span> <span class="hljs-operator">-&gt;</span> z        <span class="hljs-comment"># Less used, but allowed</span></code></pre></div>
+<ul>
+<li><strong>No data types needed</strong>; R figures it out (called dynamically typed).</li>
+</ul>
+<h4 id="brain-tip-5">🧠 Tip:</h4>
+<blockquote>
+<p>Use <code class="inline-code">&lt;-</code> to look like a little arrow &ldquo;putting value into a box&rdquo;.</p>
+</blockquote>
+<hr/>
+<h3 id="large_blue_diamond-2-conditional-statements-if-if-else-if-else-if-else">🔷 2. Conditional Statements (<code class="inline-code">if</code>, <code class="inline-code">if-else</code>, <code class="inline-code">if-else if-else</code>)</h3>
+<h4 id="blue_book-concept-2">📘 Concept:</h4>
+<p>Used for decision making &mdash; run different code depending on condition.</p>
+<h4 id="white_check_mark-syntax">✅ Syntax:</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">x &lt;- 0
+
+if (x &gt; 0) {
+  print(&quot;Positive&quot;)
+} else if (x &lt; 0) {
+  print(&quot;Negative&quot;)
+} else {
+  print(&quot;Zero&quot;)
+}</pre><pre class="hljs"><code>x <span class="hljs-operator">&lt;-</span> 0
+
+<span class="hljs-keyword">if</span> <span class="hljs-punctuation">(</span>x <span class="hljs-operator">&gt;</span> <span class="hljs-number">0</span><span class="hljs-punctuation">)</span> <span class="hljs-punctuation">{</span>
+  print<span class="hljs-punctuation">(</span><span class="hljs-string">&quot;Positive&quot;</span><span class="hljs-punctuation">)</span>
+<span class="hljs-punctuation">}</span> <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> <span class="hljs-punctuation">(</span>x <span class="hljs-operator">&lt;</span> <span class="hljs-number">0</span><span class="hljs-punctuation">)</span> <span class="hljs-punctuation">{</span>
+  print<span class="hljs-punctuation">(</span><span class="hljs-string">&quot;Negative&quot;</span><span class="hljs-punctuation">)</span>
+<span class="hljs-punctuation">}</span> <span class="hljs-keyword">else</span> <span class="hljs-punctuation">{</span>
+  print<span class="hljs-punctuation">(</span><span class="hljs-string">&quot;Zero&quot;</span><span class="hljs-punctuation">)</span>
+<span class="hljs-punctuation">}</span></code></pre></div>
+<h4 id="brain-tip-6">🧠 Tip:</h4>
+<blockquote>
+<p>Think of them like <strong>flowing rivers</strong>: each condition guides the water (code) down a path.</p>
+</blockquote>
+<hr/>
+<h3 id="large_blue_diamond-3-writing-functions-eg-sum-of-vector-elements">🔷 3. Writing Functions (e.g., Sum of Vector Elements)</h3>
+<h4 id="blue_book-concept-3">📘 Concept:</h4>
+<p>Functions are blocks of reusable code.</p>
+<h4 id="white_check_mark-example">✅ Example:</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">sum_vector &lt;- function(vec) {
+  total &lt;- sum(vec)
+  return(total)
+}
+
+my_vector &lt;- c(1, 2, 3)
+print(sum_vector(my_vector))  # Output: 6</pre><pre class="hljs"><code>sum_vector <span class="hljs-operator">&lt;-</span> <span class="hljs-keyword">function</span><span class="hljs-punctuation">(</span>vec<span class="hljs-punctuation">)</span> <span class="hljs-punctuation">{</span>
+  total <span class="hljs-operator">&lt;-</span> <span class="hljs-built_in">sum</span><span class="hljs-punctuation">(</span>vec<span class="hljs-punctuation">)</span>
+  <span class="hljs-built_in">return</span><span class="hljs-punctuation">(</span>total<span class="hljs-punctuation">)</span>
+<span class="hljs-punctuation">}</span>
+
+my_vector <span class="hljs-operator">&lt;-</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">1</span><span class="hljs-punctuation">,</span> <span class="hljs-number">2</span><span class="hljs-punctuation">,</span> <span class="hljs-number">3</span><span class="hljs-punctuation">)</span>
+print<span class="hljs-punctuation">(</span>sum_vector<span class="hljs-punctuation">(</span>my_vector<span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span>  <span class="hljs-comment"># Output: 6</span></code></pre></div>
+<h4 id="brain-tip-7">🧠 Tip:</h4>
+<blockquote>
+<p>Wrap your logic inside <code class="inline-code">function()</code>, just like packing tools in a toolbox.</p>
+</blockquote>
+<hr/>
+<h3 id="large_blue_diamond-4-more-data-structures-in-r">🔷 4. More Data Structures in R</h3>
+<p>Let&rsquo;s understand the <strong>most common data types and structures</strong> you&apos;ll use daily:</p>
+<div class="joplin-table-wrapper">
+<table>
+<thead>
+<tr>
+<th>Structure</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vector</strong></td>
+<td>1D list of items (same type)</td>
+<td><code class="inline-code">c(1,2,3)</code></td>
+</tr>
+<tr>
+<td><strong>Matrix</strong></td>
+<td>2D (rows &amp; columns), same type</td>
+<td><code class="inline-code">matrix(1:6, 2, 3)</code></td>
+</tr>
+<tr>
+<td><strong>List</strong></td>
+<td>1D, can hold mixed types</td>
+<td><code class="inline-code">list(1, &quot;hi&quot;, TRUE)</code></td>
+</tr>
+<tr>
+<td><strong>Data Frame</strong></td>
+<td>Table with rows/columns, different types allowed</td>
+<td><code class="inline-code">data.frame()</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h3 id="large_blue_diamond-5-logical-operations-used-inside-conditions">🔷 5. Logical Operations (used inside conditions)</h3>
+<div class="joplin-table-wrapper">
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="inline-code">==</code></td>
+<td>Equals</td>
+<td><code class="inline-code">x == 5</code></td>
+</tr>
+<tr>
+<td><code class="inline-code">!=</code></td>
+<td>Not equal</td>
+<td><code class="inline-code">x != 5</code></td>
+</tr>
+<tr>
+<td><code class="inline-code">&gt;</code> <code class="inline-code">&lt;</code> <code class="inline-code">&gt;=</code> <code class="inline-code">&lt;=</code></td>
+<td>Greater, less, etc.</td>
+<td><code class="inline-code">x &gt; 3</code></td>
+</tr>
+<tr>
+<td><code class="inline-code">&amp;</code></td>
+<td>AND</td>
+<td><code class="inline-code">(x &gt; 2 &amp; x &lt; 10)</code></td>
+</tr>
+<tr>
+<td>`</td>
+<td>`</td>
+<td>OR</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h3 id="large_blue_diamond-6-loops-just-basic-mention-for-now">🔷 6. Loops (Just basic mention for now)</h3>
+<ul>
+<li>
+<p>R supports <code class="inline-code">for</code>, <code class="inline-code">while</code>, and <code class="inline-code">repeat</code> loops.</p>
+</li>
+<li>
+<p>Often replaced with functions like <code class="inline-code">apply()</code> or vectorized operations for efficiency.</p>
+</li>
+</ul>
+<hr/>
+<h3 id="large_blue_diamond-quick-examples-to-practice">🔷 Quick Examples to Practice:</h3>
+<h4 id="create-variables">Create Variables</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">a &lt;- 5
+b &lt;- &quot;Data&quot;</pre><pre class="hljs"><code>a <span class="hljs-operator">&lt;-</span> 5
+b <span class="hljs-operator">&lt;-</span> <span class="hljs-string">&quot;Data&quot;</span></code></pre></div>
+<h4 id="if-else-statement">If-Else Statement</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">if (a &gt; 0) {
+  print(&quot;a is positive&quot;)
+}</pre><pre class="hljs"><code><span class="hljs-keyword">if</span> <span class="hljs-punctuation">(</span>a <span class="hljs-operator">&gt;</span> <span class="hljs-number">0</span><span class="hljs-punctuation">)</span> <span class="hljs-punctuation">{</span>
+  print<span class="hljs-punctuation">(</span><span class="hljs-string">&quot;a is positive&quot;</span><span class="hljs-punctuation">)</span>
+<span class="hljs-punctuation">}</span></code></pre></div>
+<h4 id="sum-vector-function">Sum Vector Function</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">my_sum &lt;- function(v) {
+  return(sum(v))
+}</pre><pre class="hljs"><code>my_sum <span class="hljs-operator">&lt;-</span> <span class="hljs-keyword">function</span><span class="hljs-punctuation">(</span>v<span class="hljs-punctuation">)</span> <span class="hljs-punctuation">{</span>
+  <span class="hljs-built_in">return</span><span class="hljs-punctuation">(</span><span class="hljs-built_in">sum</span><span class="hljs-punctuation">(</span>v<span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span>
+<span class="hljs-punctuation">}</span></code></pre></div>
+<hr/>
+<h3 id="bulb-summary-flashpoints-2">💡 Summary Flashpoints:</h3>
+<ul>
+<li>
+<p><strong>Use <code class="inline-code">&lt;-</code></strong> to assign values to variables.</p>
+</li>
+<li>
+<p>Use <code class="inline-code">if</code>, <code class="inline-code">else if</code>, and <code class="inline-code">else</code> for logic/decision.</p>
+</li>
+<li>
+<p><strong>Vectors</strong> are the most basic structure.</p>
+</li>
+<li>
+<p><strong>Functions</strong> help reuse code. Syntax:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">fname &lt;- function(args) {
+  # code
+  return(value)
+}</pre><pre class="hljs"><code>fname <span class="hljs-operator">&lt;-</span> <span class="hljs-keyword">function</span><span class="hljs-punctuation">(</span>args<span class="hljs-punctuation">)</span> <span class="hljs-punctuation">{</span>
+  <span class="hljs-comment"># code</span>
+  <span class="hljs-built_in">return</span><span class="hljs-punctuation">(</span>value<span class="hljs-punctuation">)</span>
+<span class="hljs-punctuation">}</span></code></pre></div>
+</li>
+<li>
+<p>R decides data types <strong>automatically</strong> (dynamic typing).</p>
+</li>
+</ul>
+<hr/>
+<p>&nbsp;</p>
+<hr/>
+<h2 id="white_check_mark-unit-3-r-packages-and-functions">✅ <strong>Unit 3: R Packages and Functions</strong></h2>
+<hr/>
+<h3 id="large_blue_diamond-1-what-is-an-r-package">🔷 1. What is an R Package?</h3>
+<h4 id="blue_book-concept-4">📘 Concept:</h4>
+<p>An <strong>R package</strong> is a <strong>bundle of functions</strong>, data, and documentation grouped together for a specific task or domain (like a mini toolkit or app).</p>
+<h4 id="package-packages-help-you">📦 Packages Help You:</h4>
+<ul>
+<li>
+<p>Avoid rewriting code</p>
+</li>
+<li>
+<p>Use advanced tools created by others</p>
+</li>
+<li>
+<p>Work faster with powerful pre-built functions</p>
+</li>
+</ul>
+<h4 id="brain-analogy">🧠 Analogy:</h4>
+<blockquote>
+<p>Think of packages as <strong>&quot;apps&quot; for R</strong>. Want to draw cool charts? Install <code class="inline-code">ggplot2</code>. Want to clean data? Use <code class="inline-code">dplyr</code>.</p>
+</blockquote>
+<hr/>
+<h3 id="large_blue_diamond-2-how-to-install-and-use-a-package">🔷 2. How to Install and Use a Package</h3>
+<h4 id="white_check_mark-install-a-package-once">✅ Install a Package (Once):</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">install.packages(&quot;ggplot2&quot;)</pre><pre class="hljs"><code>install.packages<span class="hljs-punctuation">(</span><span class="hljs-string">&quot;ggplot2&quot;</span><span class="hljs-punctuation">)</span></code></pre></div>
+<h4 id="white_check_mark-load-it-into-the-session-every-time-you-start-r">✅ Load it into the session (Every time you start R):</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">library(ggplot2)</pre><pre class="hljs"><code>library<span class="hljs-punctuation">(</span>ggplot2<span class="hljs-punctuation">)</span></code></pre></div>
+<h4 id="art-gui-alternative">🎨 GUI Alternative:</h4>
+<ul>
+<li>RStudio: Tools &rarr; Install Packages &rarr; Type name &rarr; Install</li>
+</ul>
+<h4 id="blue_book-tip">📘 Tip:</h4>
+<p>CRAN (Comprehensive R Archive Network) is like a library of R packages (15,000+!)</p>
+<hr/>
+<h3 id="large_blue_diamond-3-creating-your-own-function">🔷 3. Creating Your Own Function</h3>
+<h4 id="blue_book-concept-5">📘 Concept:</h4>
+<p>Custom functions let you reuse logic easily and make your code neater.</p>
+<h4 id="white_check_mark-syntax-2">✅ Syntax:</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">function_name &lt;- function(parameters) {
+  # body
+  return(result)
+}</pre><pre class="hljs"><code>function_name <span class="hljs-operator">&lt;-</span> <span class="hljs-keyword">function</span><span class="hljs-punctuation">(</span>parameters<span class="hljs-punctuation">)</span> <span class="hljs-punctuation">{</span>
+  <span class="hljs-comment"># body</span>
+  <span class="hljs-built_in">return</span><span class="hljs-punctuation">(</span>result<span class="hljs-punctuation">)</span>
+<span class="hljs-punctuation">}</span></code></pre></div>
+<h4 id="white_check_mark-example-square-of-a-number">✅ Example: Square of a Number</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">square_number &lt;- function(x) {
+  return(x^2)
+}
+square_number(4)  # Output: 16</pre><pre class="hljs"><code>square_number <span class="hljs-operator">&lt;-</span> <span class="hljs-keyword">function</span><span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">)</span> <span class="hljs-punctuation">{</span>
+  <span class="hljs-built_in">return</span><span class="hljs-punctuation">(</span>x<span class="hljs-operator">^</span><span class="hljs-number">2</span><span class="hljs-punctuation">)</span>
+<span class="hljs-punctuation">}</span>
+square_number<span class="hljs-punctuation">(</span><span class="hljs-number">4</span><span class="hljs-punctuation">)</span>  <span class="hljs-comment"># Output: 16</span></code></pre></div>
+<h4 id="brain-tip-8">🧠 Tip:</h4>
+<blockquote>
+<p>Always define, test, and reuse your own functions to make your code modular and professional.</p>
+</blockquote>
+<hr/>
+<h3 id="large_blue_diamond-4-downloading-and-importing-data">🔷 4. Downloading and Importing Data</h3>
+<h4 id="blue_book-data-can-be-loaded-from">📘 Data can be loaded from:</h4>
+<ul>
+<li>
+<p>A <strong>CSV file</strong> (local or online)</p>
+</li>
+<li>
+<p><strong>Excel file</strong> (using external package)</p>
+</li>
+<li>
+<p>Built-in datasets in R</p>
+</li>
+</ul>
+<h4 id="white_check_mark-examples">✅ Examples:</h4>
+<p>📂 <strong>Import CSV from Local:</strong></p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">data &lt;- read.csv(&quot;C:/Users/Soham/Documents/data.csv&quot;)</pre><pre class="hljs"><code>data <span class="hljs-operator">&lt;-</span> read.csv<span class="hljs-punctuation">(</span><span class="hljs-string">&quot;C:/Users/Soham/Documents/data.csv&quot;</span><span class="hljs-punctuation">)</span></code></pre></div>
+<p>🌐 <strong>Import CSV from Web:</strong></p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">data &lt;- read.csv(&quot;https://people.sc.fsu.edu/~jburkardt/data/csv/airtravel.csv&quot;)</pre><pre class="hljs"><code>data <span class="hljs-operator">&lt;-</span> read.csv<span class="hljs-punctuation">(</span><span class="hljs-string">&quot;https://people.sc.fsu.edu/~jburkardt/data/csv/airtravel.csv&quot;</span><span class="hljs-punctuation">)</span></code></pre></div>
+<p>📊 <strong>View Data:</strong></p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">head(data)     # Shows first 6 rows
+str(data)      # Shows structure (columns &amp; types)</pre><pre class="hljs"><code>head<span class="hljs-punctuation">(</span>data<span class="hljs-punctuation">)</span>     <span class="hljs-comment"># Shows first 6 rows</span>
+str<span class="hljs-punctuation">(</span>data<span class="hljs-punctuation">)</span>      <span class="hljs-comment"># Shows structure (columns &amp; types)</span></code></pre></div>
+<p>📘 Excel Example (needs <code class="inline-code">readxl</code> package):</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">install.packages(&quot;readxl&quot;)
+library(readxl)
+data &lt;- read_excel(&quot;data.xlsx&quot;)</pre><pre class="hljs"><code>install.packages<span class="hljs-punctuation">(</span><span class="hljs-string">&quot;readxl&quot;</span><span class="hljs-punctuation">)</span>
+library<span class="hljs-punctuation">(</span>readxl<span class="hljs-punctuation">)</span>
+data <span class="hljs-operator">&lt;-</span> read_excel<span class="hljs-punctuation">(</span><span class="hljs-string">&quot;data.xlsx&quot;</span><span class="hljs-punctuation">)</span></code></pre></div>
+<hr/>
+<h3 id="large_blue_diamond-5-why-use-functions">🔷 5. Why Use Functions?</h3>
+<h4 id="blue_book-benefits">📘 Benefits:</h4>
+<ul>
+<li>
+<p><strong>Avoid repetition</strong></p>
+</li>
+<li>
+<p><strong>Easier debugging</strong></p>
+</li>
+<li>
+<p><strong>Cleaner code</strong></p>
+</li>
+<li>
+<p>Can pass any number of arguments</p>
+</li>
+<li>
+<p>Helps with big projects or teamwork</p>
+</li>
+</ul>
+<h4 id="white_check_mark-example-multiply-two-numbers">✅ Example: Multiply Two Numbers</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">multiply &lt;- function(a, b) {
+  return(a * b)
+}
+multiply(4, 5)  # Output: 20</pre><pre class="hljs"><code>multiply <span class="hljs-operator">&lt;-</span> <span class="hljs-keyword">function</span><span class="hljs-punctuation">(</span>a<span class="hljs-punctuation">,</span> b<span class="hljs-punctuation">)</span> <span class="hljs-punctuation">{</span>
+  <span class="hljs-built_in">return</span><span class="hljs-punctuation">(</span>a <span class="hljs-operator">*</span> b<span class="hljs-punctuation">)</span>
+<span class="hljs-punctuation">}</span>
+multiply<span class="hljs-punctuation">(</span><span class="hljs-number">4</span><span class="hljs-punctuation">,</span> <span class="hljs-number">5</span><span class="hljs-punctuation">)</span>  <span class="hljs-comment"># Output: 20</span></code></pre></div>
+<hr/>
+<h3 id="large_blue_diamond-bonus-types-of-functions-in-r">🔷 Bonus: Types of Functions in R</h3>
+<div class="joplin-table-wrapper">
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Built-in</td>
+<td>Predefined in R (<code class="inline-code">sum()</code>, <code class="inline-code">mean()</code>, <code class="inline-code">sqrt()</code>, etc.)</td>
+</tr>
+<tr>
+<td>User-defined</td>
+<td>You write them (<code class="inline-code">function_name &lt;- function(...) {}</code>)</td>
+</tr>
+<tr>
+<td>Anonymous (lambda)</td>
+<td>Functions without names, used inline</td>
+</tr>
+<tr>
+<td>Recursive</td>
+<td>A function that calls itself (like <code class="inline-code">factorial</code>)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h3 id="bulb-summary-flashpoints-3">💡 Summary Flashpoints:</h3>
+<ul>
+<li>
+<p><strong>Packages = mini software toolkits</strong> that extend R&rsquo;s functionality.</p>
+</li>
+<li>
+<p>Use <code class="inline-code">install.packages()</code> once, <code class="inline-code">library()</code> every time.</p>
+</li>
+<li>
+<p><strong>Functions = reusable logic blocks</strong>.</p>
+</li>
+<li>
+<p>Syntax for functions:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">name &lt;- function(input) {
+  # body
+  return(output)
+}</pre><pre class="hljs"><code>name <span class="hljs-operator">&lt;-</span> <span class="hljs-keyword">function</span><span class="hljs-punctuation">(</span>input<span class="hljs-punctuation">)</span> <span class="hljs-punctuation">{</span>
+  <span class="hljs-comment"># body</span>
+  <span class="hljs-built_in">return</span><span class="hljs-punctuation">(</span>output<span class="hljs-punctuation">)</span>
+<span class="hljs-punctuation">}</span></code></pre></div>
+</li>
+<li>
+<p>Use <code class="inline-code">read.csv()</code> or <code class="inline-code">read_excel()</code> to <strong>load datasets</strong> into R.</p>
+</li>
+</ul>
+<hr/>
+<h3 id="brain-how-to-memorize-this-unit">🧠 How to Memorize This Unit:</h3>
+<ul>
+<li>
+<p><strong>&quot;PRUF&quot;</strong> &mdash; <strong>P</strong>ackages, <strong>R</strong>eusable code, <strong>U</strong>ser-defined functions, <strong>F</strong>ile import</p>
+</li>
+<li>
+<p>Remember the pattern: define &rarr; call &rarr; reuse</p>
+</li>
+<li>
+<p>Make a habit: Whenever you repeat code twice, make it a function.</p>
+</li>
+</ul>
+<hr/>
+<p>&nbsp;</p>
+<hr/>
+<h2 id="white_check_mark-unit-4-matrices-arrays-and-lists">✅ <strong>Unit 4: Matrices, Arrays, and Lists</strong></h2>
+<hr/>
+<h3 id="large_blue_diamond-1-matrix-in-r">🔷 1. <strong>Matrix in R</strong></h3>
+<h4 id="blue_book-concept-6">📘 Concept:</h4>
+<p>A <strong>matrix</strong> is a <strong>2D rectangular</strong> structure of elements <em>all of the same type</em> (like numbers).</p>
+<h4 id="white_check_mark-syntax-3">✅ Syntax:</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">mat &lt;- matrix(1:6, nrow = 2, ncol = 3)
+print(mat)</pre><pre class="hljs"><code>mat <span class="hljs-operator">&lt;-</span> matrix<span class="hljs-punctuation">(</span><span class="hljs-number">1</span><span class="hljs-operator">:</span><span class="hljs-number">6</span><span class="hljs-punctuation">,</span> nrow <span class="hljs-operator">=</span> <span class="hljs-number">2</span><span class="hljs-punctuation">,</span> ncol <span class="hljs-operator">=</span> <span class="hljs-number">3</span><span class="hljs-punctuation">)</span>
+print<span class="hljs-punctuation">(</span>mat<span class="hljs-punctuation">)</span></code></pre></div>
+<h4 id="arrows_counterclockwise-output">🔄 Output:</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="" data-joplin-source-open="```
+" data-joplin-source-close="
+```">     [,1] [,2] [,3]
+[1,]    1    3    5
+[2,]    2    4    6</pre><pre class="hljs"><code>     <span class="hljs-selector-attr">[,1]</span> <span class="hljs-selector-attr">[,2]</span> <span class="hljs-selector-attr">[,3]</span>
+<span class="hljs-selector-attr">[1,]</span>    <span class="hljs-number">1</span>    <span class="hljs-number">3</span>    <span class="hljs-number">5</span>
+<span class="hljs-selector-attr">[2,]</span>    <span class="hljs-number">2</span>    <span class="hljs-number">4</span>    <span class="hljs-number">6</span></code></pre></div>
+<h4 id="pushpin-note">📌 Note:</h4>
+<ul>
+<li>
+<p>Filled <strong>column-wise</strong> by default</p>
+</li>
+<li>
+<p>Data types must be the same (numeric, logical, etc.)</p>
+</li>
+</ul>
+<hr/>
+<h3 id="large_blue_diamond-2-matrix-operations">🔷 2. <strong>Matrix Operations</strong></h3>
+<h4 id="heavy_plus_sign-arithmetic">➕ Arithmetic:</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">mat1 + mat2    # element-wise addition
+mat1 * mat2    # element-wise multiplication
+mat1 %*% mat2  # matrix multiplication</pre><pre class="hljs"><code>mat1 <span class="hljs-operator">+</span> mat2    <span class="hljs-comment"># element-wise addition</span>
+mat1 <span class="hljs-operator">*</span> mat2    <span class="hljs-comment"># element-wise multiplication</span>
+mat1 <span class="hljs-operator">%*%</span> mat2  <span class="hljs-comment"># matrix multiplication</span></code></pre></div>
+<h4 id="arrows_counterclockwise-transpose">🔄 Transpose:</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">t(mat)         # swaps rows and columns</pre><pre class="hljs"><code>t<span class="hljs-punctuation">(</span>mat<span class="hljs-punctuation">)</span>         <span class="hljs-comment"># swaps rows and columns</span></code></pre></div>
+<h4 id="mag-access-elements">🔍 Access Elements:</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">mat[1,2]       # element at row 1, column 2
+mat[,2]        # entire 2nd column</pre><pre class="hljs"><code>mat<span class="hljs-punctuation">[</span><span class="hljs-number">1</span><span class="hljs-punctuation">,</span><span class="hljs-number">2</span><span class="hljs-punctuation">]</span>       <span class="hljs-comment"># element at row 1, column 2</span>
+mat<span class="hljs-punctuation">[</span><span class="hljs-punctuation">,</span><span class="hljs-number">2</span><span class="hljs-punctuation">]</span>        <span class="hljs-comment"># entire 2nd column</span></code></pre></div>
+<h4 id="heavy_plus_sign-add-rows-columns">➕ Add Rows / Columns:</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">rbind(mat, c(7,8,9))   # adds new row
+cbind(mat, c(10,11))   # adds new column</pre><pre class="hljs"><code>rbind<span class="hljs-punctuation">(</span>mat<span class="hljs-punctuation">,</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">7</span><span class="hljs-punctuation">,</span><span class="hljs-number">8</span><span class="hljs-punctuation">,</span><span class="hljs-number">9</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span>   <span class="hljs-comment"># adds new row</span>
+cbind<span class="hljs-punctuation">(</span>mat<span class="hljs-punctuation">,</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">10</span><span class="hljs-punctuation">,</span><span class="hljs-number">11</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span>   <span class="hljs-comment"># adds new column</span></code></pre></div>
+<h4 id="x-remove-rows-columns">❌ Remove Rows / Columns:</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">mat[-2, ]     # removes 2nd row
+mat[ , -1]    # removes 1st column</pre><pre class="hljs"><code>mat<span class="hljs-punctuation">[</span><span class="hljs-operator">-</span><span class="hljs-number">2</span><span class="hljs-punctuation">,</span> <span class="hljs-punctuation">]</span>     <span class="hljs-comment"># removes 2nd row</span>
+mat<span class="hljs-punctuation">[</span> <span class="hljs-punctuation">,</span> <span class="hljs-operator">-</span><span class="hljs-number">1</span><span class="hljs-punctuation">]</span>    <span class="hljs-comment"># removes 1st column</span></code></pre></div>
+<hr/>
+<h3 id="large_blue_diamond-3-vector-vs-matrix">🔷 3. <strong>Vector vs Matrix</strong></h3>
+<div class="joplin-table-wrapper">
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Vector</th>
+<th>Matrix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dimension</td>
+<td>1D</td>
+<td>2D</td>
+</tr>
+<tr>
+<td>Indexing</td>
+<td><code class="inline-code">v[2]</code></td>
+<td><code class="inline-code">m[1,2]</code></td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>Same</td>
+<td>Same</td>
+</tr>
+<tr>
+<td>Creation</td>
+<td><code class="inline-code">c()</code></td>
+<td><code class="inline-code">matrix()</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="brain-tip-9">🧠 Tip:</h4>
+<blockquote>
+<p>Matrix = Vector + Shape (rows &times; columns)</p>
+</blockquote>
+<hr/>
+<h3 id="large_blue_diamond-4-arrays-in-r-higher-dimensional">🔷 4. <strong>Arrays in R (Higher Dimensional)</strong></h3>
+<h4 id="blue_book-concept-7">📘 Concept:</h4>
+<p>An <strong>array</strong> is an extension of a matrix &mdash; it can have <strong>more than 2 dimensions</strong>.</p>
+<h4 id="white_check_mark-syntax-4">✅ Syntax:</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">arr &lt;- array(1:24, dim = c(3, 4, 2))  # 3 rows, 4 cols, 2 layers
+print(arr)</pre><pre class="hljs"><code>arr <span class="hljs-operator">&lt;-</span> array<span class="hljs-punctuation">(</span><span class="hljs-number">1</span><span class="hljs-operator">:</span><span class="hljs-number">24</span><span class="hljs-punctuation">,</span> <span class="hljs-built_in">dim</span> <span class="hljs-operator">=</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">3</span><span class="hljs-punctuation">,</span> <span class="hljs-number">4</span><span class="hljs-punctuation">,</span> <span class="hljs-number">2</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span>  <span class="hljs-comment"># 3 rows, 4 cols, 2 layers</span>
+print<span class="hljs-punctuation">(</span>arr<span class="hljs-punctuation">)</span></code></pre></div>
+<h4 id="mag-accessing-elements">🔍 Accessing Elements:</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">arr[1, 2, 1]   # Row 1, Col 2, Layer 1</pre><pre class="hljs"><code>arr<span class="hljs-punctuation">[</span><span class="hljs-number">1</span><span class="hljs-punctuation">,</span> <span class="hljs-number">2</span><span class="hljs-punctuation">,</span> <span class="hljs-number">1</span><span class="hljs-punctuation">]</span>   <span class="hljs-comment"># Row 1, Col 2, Layer 1</span></code></pre></div>
+<h4 id="bulb-use-cases">💡 Use Cases:</h4>
+<ul>
+<li>
+<p>Image data (pixels: x, y, color)</p>
+</li>
+<li>
+<p>Time series by location</p>
+</li>
+<li>
+<p>Multidimensional simulations</p>
+</li>
+</ul>
+<h4 id="brain-tip-10">🧠 Tip:</h4>
+<blockquote>
+<p>Think of arrays as <strong>&ldquo;matrices stacked like pages in a book&rdquo;</strong>.</p>
+</blockquote>
+<hr/>
+<h3 id="large_blue_diamond-5-lists-in-r">🔷 5. <strong>Lists in R</strong></h3>
+<h4 id="blue_book-concept-8">📘 Concept:</h4>
+<p>A <strong>list</strong> is a flexible structure that can hold elements of <strong>different types</strong> &mdash; even vectors, functions, or other lists.</p>
+<h4 id="white_check_mark-syntax-5">✅ Syntax:</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">my_list &lt;- list(name = &quot;Soham&quot;, marks = c(80, 90), pass = TRUE)
+print(my_list)</pre><pre class="hljs"><code>my_list <span class="hljs-operator">&lt;-</span> <span class="hljs-built_in">list</span><span class="hljs-punctuation">(</span>name <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Soham&quot;</span><span class="hljs-punctuation">,</span> marks <span class="hljs-operator">=</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">80</span><span class="hljs-punctuation">,</span> <span class="hljs-number">90</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> pass <span class="hljs-operator">=</span> <span class="hljs-literal">TRUE</span><span class="hljs-punctuation">)</span>
+print<span class="hljs-punctuation">(</span>my_list<span class="hljs-punctuation">)</span></code></pre></div>
+<h4 id="mag-accessing-elements-2">🔍 Accessing Elements:</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">my_list$name       # using name
+my_list[[2]]       # using position</pre><pre class="hljs"><code>my_list<span class="hljs-operator">$</span>name       <span class="hljs-comment"># using name</span>
+my_list<span class="hljs-punctuation">[[</span><span class="hljs-number">2</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">]</span>       <span class="hljs-comment"># using position</span></code></pre></div>
+<h4 id="blue_book-why-use-lists">📘 Why Use Lists?</h4>
+<ul>
+<li>
+<p>Useful in returning multiple results from a function</p>
+</li>
+<li>
+<p>Storing mixed-type data (e.g., info about a student: name, age, grades, etc.)</p>
+</li>
+</ul>
+<hr/>
+<h3 id="bulb-summary-flashpoints-4">💡 Summary Flashpoints:</h3>
+<div class="joplin-table-wrapper">
+<table>
+<thead>
+<tr>
+<th>Structure</th>
+<th>Type</th>
+<th>Key Function</th>
+<th>Special Feature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Matrix</td>
+<td>Homogeneous, 2D</td>
+<td><code class="inline-code">matrix()</code></td>
+<td>Row/Col operations</td>
+</tr>
+<tr>
+<td>Array</td>
+<td>Homogeneous, 3D+</td>
+<td><code class="inline-code">array()</code></td>
+<td>Multi-dim data</td>
+</tr>
+<tr>
+<td>List</td>
+<td>Heterogeneous</td>
+<td><code class="inline-code">list()</code></td>
+<td>Can store anything</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<h3 id="brain-memory-tip">🧠 Memory Tip:</h3>
+<ul>
+<li>
+<p><strong>Matrix</strong> = &ldquo;Excel table&rdquo;</p>
+</li>
+<li>
+<p><strong>Array</strong> = &ldquo;Stack of Excel sheets&rdquo;</p>
+</li>
+<li>
+<p><strong>List</strong> = &ldquo;Drawer with mixed items&rdquo;</p>
+</li>
+</ul>
+<hr/>
+<h3 id="white_check_mark-practice-snippet">✅ Practice Snippet:</h3>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```"># Matrix Example
+m &lt;- matrix(1:6, nrow=2)
+m &lt;- cbind(m, c(7, 8))  # add column
+print(m[1, 3])          # access element
+
+# Array Example
+arr &lt;- array(1:12, c(2, 2, 3))
+print(arr[2, 1, 2])     # access 2nd row, 1st col, 2nd layer
+
+# List Example
+lst &lt;- list(name=&quot;Ana&quot;, score=95, pass=TRUE)
+print(lst$name)</pre><pre class="hljs"><code><span class="hljs-comment"># Matrix Example</span>
+m <span class="hljs-operator">&lt;-</span> matrix<span class="hljs-punctuation">(</span><span class="hljs-number">1</span><span class="hljs-operator">:</span><span class="hljs-number">6</span><span class="hljs-punctuation">,</span> nrow<span class="hljs-operator">=</span><span class="hljs-number">2</span><span class="hljs-punctuation">)</span>
+m <span class="hljs-operator">&lt;-</span> cbind<span class="hljs-punctuation">(</span>m<span class="hljs-punctuation">,</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">7</span><span class="hljs-punctuation">,</span> <span class="hljs-number">8</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span>  <span class="hljs-comment"># add column</span>
+print<span class="hljs-punctuation">(</span>m<span class="hljs-punctuation">[</span><span class="hljs-number">1</span><span class="hljs-punctuation">,</span> <span class="hljs-number">3</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">)</span>          <span class="hljs-comment"># access element</span>
+
+<span class="hljs-comment"># Array Example</span>
+arr <span class="hljs-operator">&lt;-</span> array<span class="hljs-punctuation">(</span><span class="hljs-number">1</span><span class="hljs-operator">:</span><span class="hljs-number">12</span><span class="hljs-punctuation">,</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">2</span><span class="hljs-punctuation">,</span> <span class="hljs-number">2</span><span class="hljs-punctuation">,</span> <span class="hljs-number">3</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span>
+print<span class="hljs-punctuation">(</span>arr<span class="hljs-punctuation">[</span><span class="hljs-number">2</span><span class="hljs-punctuation">,</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span> <span class="hljs-number">2</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">)</span>     <span class="hljs-comment"># access 2nd row, 1st col, 2nd layer</span>
+
+<span class="hljs-comment"># List Example</span>
+lst <span class="hljs-operator">&lt;-</span> <span class="hljs-built_in">list</span><span class="hljs-punctuation">(</span>name<span class="hljs-operator">=</span><span class="hljs-string">&quot;Ana&quot;</span><span class="hljs-punctuation">,</span> score<span class="hljs-operator">=</span><span class="hljs-number">95</span><span class="hljs-punctuation">,</span> pass<span class="hljs-operator">=</span><span class="hljs-literal">TRUE</span><span class="hljs-punctuation">)</span>
+print<span class="hljs-punctuation">(</span>lst<span class="hljs-operator">$</span>name<span class="hljs-punctuation">)</span></code></pre></div>
+<hr/>
+<p>&nbsp;</p>
+<hr/>
+<h2 id="white_check_mark-unit-5-data-frames">✅ <strong>Unit 5: Data Frames</strong></h2>
+<hr/>
+<h3 id="large_blue_diamond-1-what-is-a-data-frame">🔷 1. <strong>What is a Data Frame?</strong></h3>
+<h4 id="blue_book-concept-9">📘 Concept:</h4>
+<p>A <strong>data frame</strong> is a <strong>tabular structure</strong> (like an Excel sheet) where:</p>
+<ul>
+<li>
+<p>Each <strong>column</strong> can have a <strong>different data type</strong> (numeric, character, logical, etc.)</p>
+</li>
+<li>
+<p>Each <strong>row</strong> represents a single observation/record</p>
+</li>
+</ul>
+<h4 id="white_check_mark-example-2">✅ Example:</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">df &lt;- data.frame(Name = c(&quot;John&quot;, &quot;Alice&quot;), Age = c(23, 25), Passed = c(TRUE, FALSE))
+print(df)</pre><pre class="hljs"><code>df <span class="hljs-operator">&lt;-</span> data.frame<span class="hljs-punctuation">(</span>Name <span class="hljs-operator">=</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;John&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;Alice&quot;</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> Age <span class="hljs-operator">=</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">23</span><span class="hljs-punctuation">,</span> <span class="hljs-number">25</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> Passed <span class="hljs-operator">=</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span> <span class="hljs-literal">FALSE</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span>
+print<span class="hljs-punctuation">(</span>df<span class="hljs-punctuation">)</span></code></pre></div>
+<h4 id="mag-output">🔍 Output:</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="" data-joplin-source-open="```
+" data-joplin-source-close="
+```">   Name Age Passed
+1  John  23   TRUE
+2 Alice  25  FALSE</pre><pre class="hljs"><code>   Name Age Passed
+<span class="hljs-number">1</span>  John  <span class="hljs-number">23</span>   <span class="hljs-literal">TRUE</span>
+<span class="hljs-number">2</span> Alice  <span class="hljs-number">25</span>  <span class="hljs-literal">FALSE</span></code></pre></div>
+<h4 id="brain-tip-11">🧠 Tip:</h4>
+<blockquote>
+<p>Data frame = <strong>Matrix + Flexibility</strong> (each column can be of a different type)</p>
+</blockquote>
+<hr/>
+<h3 id="large_blue_diamond-2-creating-a-data-frame">🔷 2. <strong>Creating a Data Frame</strong></h3>
+<h4 id="white_check_mark-code">✅ Code:</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">names &lt;- c(&quot;Sam&quot;, &quot;Lily&quot;)
+ages &lt;- c(22, 24)
+grades &lt;- c(&quot;A&quot;, &quot;B&quot;)
+df &lt;- data.frame(Name = names, Age = ages, Grade = grades)</pre><pre class="hljs"><code><span class="hljs-built_in">names</span> <span class="hljs-operator">&lt;-</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;Sam&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;Lily&quot;</span><span class="hljs-punctuation">)</span>
+ages <span class="hljs-operator">&lt;-</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">22</span><span class="hljs-punctuation">,</span> <span class="hljs-number">24</span><span class="hljs-punctuation">)</span>
+grades <span class="hljs-operator">&lt;-</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;A&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;B&quot;</span><span class="hljs-punctuation">)</span>
+df <span class="hljs-operator">&lt;-</span> data.frame<span class="hljs-punctuation">(</span>Name <span class="hljs-operator">=</span> <span class="hljs-built_in">names</span><span class="hljs-punctuation">,</span> Age <span class="hljs-operator">=</span> ages<span class="hljs-punctuation">,</span> Grade <span class="hljs-operator">=</span> grades<span class="hljs-punctuation">)</span></code></pre></div>
+<h4 id="mag-check-structure">🔍 Check Structure:</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">str(df)</pre><pre class="hljs"><code>str<span class="hljs-punctuation">(</span>df<span class="hljs-punctuation">)</span></code></pre></div>
+<hr/>
+<h3 id="large_blue_diamond-3-accessing-data-in-a-data-frame">🔷 3. <strong>Accessing Data in a Data Frame</strong></h3>
+<div class="joplin-table-wrapper">
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Purpose</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="inline-code">$</code></td>
+<td>Access column</td>
+<td><code class="inline-code">df$Name</code></td>
+</tr>
+<tr>
+<td><code class="inline-code">df[row, col]</code></td>
+<td>Access by index</td>
+<td><code class="inline-code">df[1,2]</code> (row 1, column 2)</td>
+</tr>
+<tr>
+<td><code class="inline-code">df[ , col]</code></td>
+<td>Entire column</td>
+<td><code class="inline-code">df[, 1]</code></td>
+</tr>
+<tr>
+<td><code class="inline-code">df[row, ]</code></td>
+<td>Entire row</td>
+<td><code class="inline-code">df[1, ]</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="brain-tip-12">🧠 Tip:</h4>
+<blockquote>
+<p><code class="inline-code">$</code> is like calling a field by its name (like <code class="inline-code">df$Age</code> gets you the whole Age column)</p>
+</blockquote>
+<hr/>
+<h3 id="large_blue_diamond-4-factors-in-r">🔷 4. <strong>Factors in R</strong></h3>
+<h4 id="blue_book-concept-10">📘 Concept:</h4>
+<p><strong>Factors</strong> represent <strong>categorical data</strong>. Internally, they are stored as numbers with labels.</p>
+<h4 id="white_check_mark-example-3">✅ Example:</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">gender &lt;- factor(c(&quot;Male&quot;, &quot;Female&quot;, &quot;Male&quot;, &quot;Female&quot;))
+print(gender)</pre><pre class="hljs"><code>gender <span class="hljs-operator">&lt;-</span> factor<span class="hljs-punctuation">(</span><span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;Male&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;Female&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;Male&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;Female&quot;</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span>
+print<span class="hljs-punctuation">(</span>gender<span class="hljs-punctuation">)</span></code></pre></div>
+<h4 id="mag-output-2">🔍 Output:</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="" data-joplin-source-open="```
+" data-joplin-source-close="
+```">[1] Male   Female Male   Female
+Levels: Female Male</pre><pre class="hljs"><code><span class="hljs-string">[1]</span> Male   Female Male   Female
+Levels: Female Male</code></pre></div>
+<h4 id="blue_book-why-important">📘 Why Important?</h4>
+<ul>
+<li>
+<p>Used in statistical modeling (like regression)</p>
+</li>
+<li>
+<p>Helps reduce memory (since categories are stored efficiently)</p>
+</li>
+</ul>
+<hr/>
+<h3 id="large_blue_diamond-5-merging-two-data-frames">🔷 5. <strong>Merging Two Data Frames</strong></h3>
+<h4 id="white_check_mark-example-4">✅ Example:</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">df1 &lt;- data.frame(ID = c(1, 2), Name = c(&quot;Alex&quot;, &quot;Brian&quot;))
+df2 &lt;- data.frame(ID = c(1, 2), Score = c(85, 90))
+merged_df &lt;- merge(df1, df2, by = &quot;ID&quot;)</pre><pre class="hljs"><code>df1 <span class="hljs-operator">&lt;-</span> data.frame<span class="hljs-punctuation">(</span>ID <span class="hljs-operator">=</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">1</span><span class="hljs-punctuation">,</span> <span class="hljs-number">2</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> Name <span class="hljs-operator">=</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;Alex&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;Brian&quot;</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span>
+df2 <span class="hljs-operator">&lt;-</span> data.frame<span class="hljs-punctuation">(</span>ID <span class="hljs-operator">=</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">1</span><span class="hljs-punctuation">,</span> <span class="hljs-number">2</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> Score <span class="hljs-operator">=</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">85</span><span class="hljs-punctuation">,</span> <span class="hljs-number">90</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span>
+merged_df <span class="hljs-operator">&lt;-</span> merge<span class="hljs-punctuation">(</span>df1<span class="hljs-punctuation">,</span> df2<span class="hljs-punctuation">,</span> by <span class="hljs-operator">=</span> <span class="hljs-string">&quot;ID&quot;</span><span class="hljs-punctuation">)</span></code></pre></div>
+<h4 id="mag-output-3">🔍 Output:</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="" data-joplin-source-open="```
+" data-joplin-source-close="
+```">  ID  Name Score
+1  1  Alex    85
+2  2 Brian    90</pre><pre class="hljs"><code>  <span class="hljs-attribute">ID</span>  Name Score
+<span class="hljs-attribute">1</span>  <span class="hljs-number">1</span>  Alex    <span class="hljs-number">85</span>
+<span class="hljs-attribute">2</span>  <span class="hljs-number">2</span> Brian    <span class="hljs-number">90</span></code></pre></div>
+<h4 id="brain-tip-13">🧠 Tip:</h4>
+<blockquote>
+<p><code class="inline-code">merge()</code> is like <strong>joining two tables using a common key column</strong> (e.g., ID)</p>
+</blockquote>
+<hr/>
+<h3 id="large_blue_diamond-6-using-apply-with-data-frames">🔷 6. <strong>Using <code class="inline-code">apply()</code> with Data Frames</strong></h3>
+<h4 id="blue_book-concept-11">📘 Concept:</h4>
+<p><code class="inline-code">apply()</code> is used to apply a function (like <code class="inline-code">mean</code>, <code class="inline-code">sum</code>) to rows or columns.</p>
+<h4 id="white_check_mark-syntax-6">✅ Syntax:</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">apply(X, MARGIN, FUN)</pre><pre class="hljs"><code>apply<span class="hljs-punctuation">(</span>X<span class="hljs-punctuation">,</span> MARGIN<span class="hljs-punctuation">,</span> FUN<span class="hljs-punctuation">)</span></code></pre></div>
+<ul>
+<li>
+<p><code class="inline-code">X</code>: data frame or matrix</p>
+</li>
+<li>
+<p><code class="inline-code">MARGIN = 1</code> &rarr; rows</p>
+</li>
+<li>
+<p><code class="inline-code">MARGIN = 2</code> &rarr; columns</p>
+</li>
+</ul>
+<h4 id="white_check_mark-example-5">✅ Example:</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">df &lt;- data.frame(A = c(1, 2, 3), B = c(4, 5, 6))
+apply(df, 2, mean)   # Mean of each column</pre><pre class="hljs"><code>df <span class="hljs-operator">&lt;-</span> data.frame<span class="hljs-punctuation">(</span>A <span class="hljs-operator">=</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">1</span><span class="hljs-punctuation">,</span> <span class="hljs-number">2</span><span class="hljs-punctuation">,</span> <span class="hljs-number">3</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> B <span class="hljs-operator">=</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">4</span><span class="hljs-punctuation">,</span> <span class="hljs-number">5</span><span class="hljs-punctuation">,</span> <span class="hljs-number">6</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span>
+apply<span class="hljs-punctuation">(</span>df<span class="hljs-punctuation">,</span> <span class="hljs-number">2</span><span class="hljs-punctuation">,</span> mean<span class="hljs-punctuation">)</span>   <span class="hljs-comment"># Mean of each column</span></code></pre></div>
+<h4 id="mag-output-4">🔍 Output:</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="" data-joplin-source-open="```
+" data-joplin-source-close="
+```">A B 
+2 5</pre><pre class="hljs"><code><span class="hljs-selector-tag">A</span> <span class="hljs-selector-tag">B</span> 
+<span class="hljs-number">2</span> <span class="hljs-number">5</span></code></pre></div>
+<hr/>
+<h3 id="large_blue_diamond-7-writing-functions-on-data-frames">🔷 7. <strong>Writing Functions on Data Frames</strong></h3>
+<h4 id="white_check_mark-example-mean-of-each-column">✅ Example: Mean of Each Column</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">mean_columns &lt;- function(df) {
+  return(apply(df, 2, mean))
+}
+
+data &lt;- data.frame(x = c(1, 2, 3), y = c(4, 5, 6))
+print(mean_columns(data))   # Output: x = 2, y = 5</pre><pre class="hljs"><code>mean_columns <span class="hljs-operator">&lt;-</span> <span class="hljs-keyword">function</span><span class="hljs-punctuation">(</span>df<span class="hljs-punctuation">)</span> <span class="hljs-punctuation">{</span>
+  <span class="hljs-built_in">return</span><span class="hljs-punctuation">(</span>apply<span class="hljs-punctuation">(</span>df<span class="hljs-punctuation">,</span> <span class="hljs-number">2</span><span class="hljs-punctuation">,</span> mean<span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span>
+<span class="hljs-punctuation">}</span>
+
+data <span class="hljs-operator">&lt;-</span> data.frame<span class="hljs-punctuation">(</span>x <span class="hljs-operator">=</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">1</span><span class="hljs-punctuation">,</span> <span class="hljs-number">2</span><span class="hljs-punctuation">,</span> <span class="hljs-number">3</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> y <span class="hljs-operator">=</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">4</span><span class="hljs-punctuation">,</span> <span class="hljs-number">5</span><span class="hljs-punctuation">,</span> <span class="hljs-number">6</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span>
+print<span class="hljs-punctuation">(</span>mean_columns<span class="hljs-punctuation">(</span>data<span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span>   <span class="hljs-comment"># Output: x = 2, y = 5</span></code></pre></div>
+<hr/>
+<h3 id="large_blue_diamond-8-scope-issues-in-functions">🔷 8. <strong>Scope Issues in Functions</strong></h3>
+<h4 id="blue_book-problem">📘 Problem:</h4>
+<p>Same variable name inside and outside a function &rarr; confusion</p>
+<h4 id="white_check_mark-example-6">✅ Example:</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">a &lt;- 10
+myfunc &lt;- function() {
+  a &lt;- 5
+  print(a)  # prints local a
+}
+myfunc()
+print(a)      # prints global a (10)</pre><pre class="hljs"><code>a <span class="hljs-operator">&lt;-</span> 10
+myfunc <span class="hljs-operator">&lt;-</span> <span class="hljs-keyword">function</span><span class="hljs-punctuation">(</span><span class="hljs-punctuation">)</span> <span class="hljs-punctuation">{</span>
+  a <span class="hljs-operator">&lt;-</span> 5
+  print<span class="hljs-punctuation">(</span>a<span class="hljs-punctuation">)</span>  <span class="hljs-comment"># prints local a</span>
+<span class="hljs-punctuation">}</span>
+myfunc<span class="hljs-punctuation">(</span><span class="hljs-punctuation">)</span>
+print<span class="hljs-punctuation">(</span>a<span class="hljs-punctuation">)</span>      <span class="hljs-comment"># prints global a (10)</span></code></pre></div>
+<h4 id="brain-global-assignment">🧠 Global Assignment:</h4>
+<p>Use <code class="inline-code">&lt;&lt;-</code> to assign to global from inside a function:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">f &lt;- function() {
+  x &lt;&lt;- 100
+}</pre><pre class="hljs"><code>f <span class="hljs-operator">&lt;-</span> <span class="hljs-keyword">function</span><span class="hljs-punctuation">(</span><span class="hljs-punctuation">)</span> <span class="hljs-punctuation">{</span>
+  x <span class="hljs-operator">&lt;&lt;-</span> <span class="hljs-number">100</span>
+<span class="hljs-punctuation">}</span></code></pre></div>
+<hr/>
+<h3 id="large_blue_diamond-9-working-with-tables-and-applying-functions">🔷 9. <strong>Working with Tables and Applying Functions</strong></h3>
+<h4 id="white_check_mark-full-script">✅ Full Script:</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="r" data-joplin-source-open="```r
+" data-joplin-source-close="
+```">data &lt;- data.frame(Name = c(&quot;Tom&quot;, &quot;Jerry&quot;, &quot;Spike&quot;), Marks = c(80, 90, 85))
+
+# Frequency table: how many scored &gt; 85
+table(data$Marks &gt; 85)
+
+# Grade classification function
+grade_function &lt;- function(score) {
+  if (score &gt;= 90) return(&quot;A&quot;)
+  else if (score &gt;= 80) return(&quot;B&quot;)
+  else return(&quot;C&quot;)
+}
+
+# Add Grade column
+data$Grade &lt;- sapply(data$Marks, grade_function)
+print(data)</pre><pre class="hljs"><code>data <span class="hljs-operator">&lt;-</span> data.frame<span class="hljs-punctuation">(</span>Name <span class="hljs-operator">=</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;Tom&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;Jerry&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;Spike&quot;</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> Marks <span class="hljs-operator">=</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">80</span><span class="hljs-punctuation">,</span> <span class="hljs-number">90</span><span class="hljs-punctuation">,</span> <span class="hljs-number">85</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span>
+
+<span class="hljs-comment"># Frequency table: how many scored &gt; 85</span>
+table<span class="hljs-punctuation">(</span>data<span class="hljs-operator">$</span>Marks <span class="hljs-operator">&gt;</span> <span class="hljs-number">85</span><span class="hljs-punctuation">)</span>
+
+<span class="hljs-comment"># Grade classification function</span>
+grade_function <span class="hljs-operator">&lt;-</span> <span class="hljs-keyword">function</span><span class="hljs-punctuation">(</span>score<span class="hljs-punctuation">)</span> <span class="hljs-punctuation">{</span>
+  <span class="hljs-keyword">if</span> <span class="hljs-punctuation">(</span>score <span class="hljs-operator">&gt;=</span> <span class="hljs-number">90</span><span class="hljs-punctuation">)</span> <span class="hljs-built_in">return</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;A&quot;</span><span class="hljs-punctuation">)</span>
+  <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> <span class="hljs-punctuation">(</span>score <span class="hljs-operator">&gt;=</span> <span class="hljs-number">80</span><span class="hljs-punctuation">)</span> <span class="hljs-built_in">return</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;B&quot;</span><span class="hljs-punctuation">)</span>
+  <span class="hljs-keyword">else</span> <span class="hljs-built_in">return</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;C&quot;</span><span class="hljs-punctuation">)</span>
+<span class="hljs-punctuation">}</span>
+
+<span class="hljs-comment"># Add Grade column</span>
+data<span class="hljs-operator">$</span>Grade <span class="hljs-operator">&lt;-</span> sapply<span class="hljs-punctuation">(</span>data<span class="hljs-operator">$</span>Marks<span class="hljs-punctuation">,</span> grade_function<span class="hljs-punctuation">)</span>
+print<span class="hljs-punctuation">(</span>data<span class="hljs-punctuation">)</span></code></pre></div>
+<hr/>
+<h3 id="bulb-summary-flashpoints-5">💡 Summary Flashpoints:</h3>
+<ul>
+<li>
+<p><strong>Data frame</strong> = table with <strong>columns of different types</strong></p>
+</li>
+<li>
+<p><strong><code class="inline-code">data.frame()</code></strong> creates data frames</p>
+</li>
+<li>
+<p>Use <code class="inline-code">merge()</code> to join data frames on a column</p>
+</li>
+<li>
+<p><strong><code class="inline-code">apply(df, 2, FUN)</code></strong> applies functions to each column</p>
+</li>
+<li>
+<p>Use <code class="inline-code">$</code> or indexing to access parts of a data frame</p>
+</li>
+<li>
+<p><strong>Factors</strong> are useful for categorical data</p>
+</li>
+<li>
+<p><strong><code class="inline-code">sapply()</code></strong> is used to apply a function to each element in a vector or column</p>
+</li>
+</ul>
+<hr/>
+<h3 id="brain-memory-tip-2">🧠 Memory Tip:</h3>
+<ul>
+<li>
+<p>Data frame = &quot;Excel sheet&quot;</p>
+</li>
+<li>
+<p><code class="inline-code">apply()</code> &rarr; Apply function to rows/columns</p>
+</li>
+<li>
+<p><code class="inline-code">merge()</code> &rarr; Merge/join tables</p>
+</li>
+<li>
+<p><code class="inline-code">$</code> &rarr; Access column by name</p>
+</li>
+<li>
+<p><code class="inline-code">factor()</code> &rarr; Use when working with <strong>categories</strong> (like Male/Female)</p>
+</li>
+</ul>
+<hr/>
+<p>&nbsp;</p>
+</div></div>
+					</body>
+				</html>
+			

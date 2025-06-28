@@ -1,0 +1,15 @@
+<?xml version = "1.0" encoding ="UTF-8"?>
+<?xml-stylesheet type="text/css" href="cars.css"?>
+
+<car_showroom>
+    <car>
+        <model>Buggati</model>
+        <price>10,00,000</price>
+        <color>Dark Blue</color>
+    </car>
+    <car>
+        <model>BMW</model>
+        <price>57,00,000</price>
+        <color>Black</color>
+    </car>
+</car_showroom>

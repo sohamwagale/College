@@ -1,0 +1,17 @@
+array:
+    max size 10e7 in global and 10e6 in main for integer
+
+map:
+    storing or fetching in a map takes O(log(n)) in all cases
+unordered map:
+    storing or fetching takes O(1) in best and average cases and O(N) in absolute worst case (n is the number of elements in map).
+    key can be only indivisual data type.
+    #worst case:
+        due to internal collsions
+hasing work:
+    maybe using divsion method 
+    max length of hash array is given. the element larger than that is moduled and stored in the hash index of similar number like 18,28,38 stored in the same hash index using linked list and each element added is chained to it in order.
+Internal collsions:
+    suppose all the elementof the array end up in the same hash index, as fetching is done by iterating through each element, it will require O(N) tc.
+
+
